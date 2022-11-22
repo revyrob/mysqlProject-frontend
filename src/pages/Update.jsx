@@ -1,7 +1,9 @@
 import React from 'react'
 
-export const Update = () => {
+function Update() {
   return (
     <div>Update</div>
   )
 }
+
+export default Update;
