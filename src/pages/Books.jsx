@@ -4,6 +4,7 @@ import axios from "axios";
 import {Link} from 'react-router-dom';
 
 function Books() {
+  //check 33:58 on video
   const [books, setBooks] = useState([]);
 
   useEffect(() => {
