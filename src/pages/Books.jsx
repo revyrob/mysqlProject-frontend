@@ -19,6 +19,16 @@ function Books() {
     //fun the async function to get data back from my backend
     fetchAllBooks();
   }, []);
+
+  const handleDelete = async(id)=> {
+    try{
+      await axios.delete("http://localhost:8080/books/" +id)
+      //refresh page but in future use redux or another management tool
+      window.location.reload()
+    } catch (err) {
+      console.log(err)
+    }
+  }
  console.log(books)
   return (
     <div>
@@ -31,8 +41,8 @@ function Books() {
             <p>{book.description}</p>
             <span>{book.price}</span>
             <div className="book__btn">
-            <button className="book__btn--delete">Delete</button>
-            <button className="book__btn--update">Update</button>
+            <button className="book__btn--delete" onClick={()=>handleDelete(book.id)}>Delete</button>
+            <button className="book__btn--update"><Link to={`/update/${book.id}`}>Update</Link></button>
             </div>
           </div>
         ))}
