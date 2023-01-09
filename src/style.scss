@@ -7,14 +7,48 @@
  text-align: center;
 }
 .books{
+    flex:1;
     display: flex;
+    margin-bottom: 20px;
+    
 }
 .book{
-    flex:1;
+    display: flex;
+    flex-direction: column;
+    margin: 0 10px;
+    &__btn{
+        display: flex;
+        justify-content: space-around;
+        &--delete{
+            border:none;
+            padding:6px 9px;
+            border-radius: 5px;
+            background-color: rgb(252, 76, 76);
+            cursor: pointer;
+            color: white;
+        }
+        &--update{
+            border:none;
+            padding:6px 9px;
+            border-radius: 5px;            
+            background-color: rgb(125, 125, 244);
+            cursor: pointer;
+            color: white
+        }
+    }
 }
 img{
     width:200px;
     height:300px;
     object-fit: cover;
     background-color: rgb(170, 170, 244);
+}
+.btn__add{
+    border:none;
+    padding:6px 9px;
+    border-radius: 5px;            
+    background-color: rgb(68, 126, 68);
+    cursor: pointer;
+    color: white;
+    box-shadow: 2px 2px 2px rgb(190, 188, 188);
 }

@@ -30,11 +30,16 @@ function Books() {
             <h2>{book.title}</h2>
             <p>{book.description}</p>
             <span>{book.price}</span>
+            <div className="book__btn">
+            <button className="book__btn--delete">Delete</button>
+            <button className="book__btn--update">Update</button>
+            </div>
           </div>
         ))}
+
       </div>
           <Link to="/add">
-      <button>Add new Book</button>
+      <button className="btn__add">Add new Book</button>
       </Link>
     </div>
   );

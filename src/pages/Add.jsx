@@ -60,7 +60,7 @@ function Add() {
         name="cover"
       />
 
-      <button onClick={handleClick}>Add</button>
+      <button className="btn__add" onClick={handleClick}>Add</button>
     </div>
   );
 }
