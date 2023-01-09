@@ -15,7 +15,8 @@ function Update() {
   //navigate
   const navigate = useNavigate();
   const location = useLocation();
-  const idParam = location.pathname.split('/');
+  const idParam = location.pathname.split('/')[2];
+  console.log(idParam)
 
   //on change function that will setBook with the info provided
   const handleChange = (e) => {
